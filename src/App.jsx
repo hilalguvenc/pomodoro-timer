@@ -28,7 +28,7 @@ function App() {
             className="up-arrow"
             src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
           />
-          <h1>25</h1>
+          <h1 className="fifty-five">25</h1>
           <img
             className="down-arrow"
             src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
@@ -38,7 +38,7 @@ function App() {
             className="up-arrow1"
             src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
           />
-          <h1>5</h1>
+          <h1 className="five">5</h1>
           <img
             className="down-arrow1"
             src={`https://image.flaticon.com/icons/svg/271/271237.svg`}

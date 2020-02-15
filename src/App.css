@@ -100,8 +100,8 @@ body {
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
   font-size: 23px;
-  left: 300px;
-  top: 7px;
+  left: 305px;
+  top: -117px;
 }
 .clock {
   position: relative;
@@ -113,21 +113,43 @@ body {
   width: 20px;
   height: 20px;
   position: relative;
+  left: 90px;
+  top: 35px;
+  border: none;
+  background-color: none;
 }
 .down-arrow {
   width: 20px;
   height: 20px;
   position: relative;
+  left: 155px;
+  top: -42px;
   -webkit-transform: rotate(180deg);
 }
 .up-arrow1 {
   width: 20px;
   height: 20px;
   position: relative;
+  left: 335px;
+  top: -137px;
 }
 .down-arrow1 {
   width: 20px;
   height: 20px;
   position: relative;
   -webkit-transform: rotate(180deg);
+  left: 390px;
+  top: -215px;
+}
+.fifty-five {
+  position: relative;
+  left: 122px;
+  bottom: 7px;
+  font-size: 20px;
+}
+.five {
+  position: relative;
+  left: 367px;
+  top:-180px;
+  font-size: 20px;
 }
