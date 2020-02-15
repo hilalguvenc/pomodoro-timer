@@ -26,20 +26,22 @@ function App() {
           <p className="session-length">Session Length</p>
           <img
             className="up-arrow"
-            src={`https://img.icons8.com/material-rounded/24/000000/circled-up.png`}
+            src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
           />
+          <h1>25</h1>
           <img
             className="down-arrow"
-            src={`https://img.icons8.com/material-rounded/24/000000/circled-up.png`}
+            src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
           />
           <p className="break-length">Break Length</p>
           <img
-            className="up-arrow-1"
-            src={`https://img.icons8.com/material-rounded/24/000000/circled-up.png`}
+            className="up-arrow1"
+            src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
           />
+          <h1>5</h1>
           <img
-            className="down-arrow-2"
-            src={`https://img.icons8.com/material-rounded/24/000000/circled-up.png`}
+            className="down-arrow1"
+            src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
           />
         </div>
       </div>

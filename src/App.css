@@ -1,12 +1,12 @@
 body {
-  background-color: #eb144c;
+  background-color: black;
 }
 .title {
   color: white;
   font-family: "Times New Roman", Times, serif;
   position: relative;
   text-align: center;
-  top: 20px;
+  top: 50px;
   font-size: 20px;
 }
 .start {
@@ -19,14 +19,11 @@ body {
   width: 130px;
   height: 48px;
   position: relative;
-  top: 140px;
-  left: 60px;
+  top: 150px;
+  left: 100px;
   font-size: 22px;
   text-align: center;
   z-index: 1;
-}
-.start:hover {
-  background-color: grey;
 }
 .reset {
   border: white;
@@ -38,80 +35,73 @@ body {
   width: 130px;
   height: 48px;
   position: relative;
-  left: 70px;
-  top: 140px;
+  left: 110px;
+  top: 150px;
   font-size: 22px;
   text-align: center;
   z-index: 1;
 }
-.start-icon {
-  width: 20px;
-  height: 20px;
-  position: relative;
-  left: -54px;
-  text-align: center;
-  z-index: 1;
-  top: 143px;
-}
-.reset-icon {
-  width: 20px;
-  height: 20px;
-  position: relative;
-  top: 143px;
-  left: -50px;
-  text-align: center;
-  z-index: 1;
-}
-.reset:hover {
-  background-color: grey;
-}
 .card {
-  background-color: white;
+  background-color: #eb144c;
   border-radius: 50px;
-  width: 400px;
-  height: 200px;
+  width: 500px;
+  height: 400px;
   position: relative;
-  top: 140px;
+  top: 40px;
   margin: auto;
   z-index: 0px;
 }
-/* .white-card{
+.white-card {
   background-color: white;
-  border-bottom-right-radius:50px ;
-  border-bottom-left-radius:50px ;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
   width: 500px;
   height: 150px;
   position: relative;
   top: 180px;
   margin: auto;
-  z-index:0px;
-} */
+  z-index: 0px;
+}
 .session {
   font-family: "Times New Roman", Times, serif;
   font-size: 25px;
   position: relative;
   top: 50px;
   text-align: center;
-  color: white;
 }
-
+.start-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  right: 20px;
+  text-align: center;
+  z-index: 1;
+  top: 153px;
+}
+.reset-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 153px;
+  left: -10px;
+  text-align: center;
+  z-index: 1;
+}
 .session-length {
   position: relative;
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
-  font-size: 18px;
-  left: -30px;
-  bottom: 250px;
-  color: white;
+  font-size: 23px;
+  left: 60px;
+  top: 55px;
 }
 .break-length {
   position: relative;
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
-  font-size: 18px;
-  left: 330px;
-  bottom: 331px;
-  color: white;
+  font-size: 23px;
+  left: 300px;
+  top: 7px;
 }
 .clock {
   position: relative;
@@ -123,14 +113,21 @@ body {
   width: 20px;
   height: 20px;
   position: relative;
-  bottom: 288px;
-  left: -60px;
 }
 .down-arrow {
   width: 20px;
   height: 20px;
   position: relative;
   -webkit-transform: rotate(180deg);
-  bottom: 288px;
-  left: 75px;
+}
+.up-arrow1 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+.down-arrow1 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  -webkit-transform: rotate(180deg);
 }
