@@ -53,7 +53,7 @@ body {
 .white-card {
   background-color: white;
   width: 500px;
-  height: 150px;
+  height: 100px;
   position: relative;
   top: 100px;
   margin: auto;
@@ -88,17 +88,17 @@ body {
   position: relative;
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
-  font-size: 23px;
+  font-size: 18px;
   left: 60px;
-  top: 55px;
+  top: 40px;
 }
 .break-length {
   position: relative;
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
-  font-size: 23px;
-  left: 305px;
-  top: -117px;
+  font-size: 18px;
+  left: 225px;
+  top: -100px;
 }
 .clock {
   position: relative;
@@ -107,48 +107,49 @@ body {
   font-size: 30px;
 }
 .up-arrow {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   position: relative;
-  left: 90px;
-  top: 35px;
+  left: 86px;
+  top: 25px;
   border: none;
   background-color: none;
 }
 .down-arrow {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   position: relative;
-  left: 155px;
-  top: -42px;
+  left: 146px;
+  top: -39px;
   -webkit-transform: rotate(180deg);
 }
 .up-arrow1 {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   position: relative;
-  left: 335px;
-  top: -137px;
+  left: 250px;
+  top: -117px;
 }
 .down-arrow1 {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   position: relative;
   -webkit-transform: rotate(180deg);
-  left: 390px;
-  top: -215px;
+  left: 300px;
+  top: -179px;
 }
 .fifty-five {
   position: relative;
-  left: 122px;
+  left: 115px;
   bottom: 7px;
-  font-size: 20px;
+  font-size: 16px;
+  top: -10px;
 }
 .five {
   position: relative;
-  left: 367px;
-  top: -180px;
-  font-size: 20px;
+  left: 280px;
+  top: -152px;
+  font-size: 16px;
 }
 @media only screen and (min-width: 600px) {
   body {
