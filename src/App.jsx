@@ -9,6 +9,13 @@ function App() {
   const [breakLength, setBreakLength] = useState(5);
   const [timerMinute, setTimerMinute] = useState(25);
 
+  const onIncreaseBreakLength = () => {
+    setBreakLength(breakLength + 1);
+  };
+  const onDecreaseBreakLength = () => {
+    setBreakLength(breakLength - 1);
+  };
+
   return (
     <div className="page">
       <div className="title">
@@ -30,7 +37,11 @@ function App() {
         </div>
         <div className="white-card">
           <Session session={sessionLength} />
-          <Break break={breakLength} />
+          <Break
+            break={breakLength}
+            increaseBreak={onIncreaseBreakLength}
+            decreaseBreak={onDecreaseBreakLength}
+          />
         </div>
       </div>
     </div>
