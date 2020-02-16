@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Break from "./components/Break";
 import Session from "./components/Session";
 
 function App() {
+  const [sessionLength, setSessionLength] = useState(25);
+  const [breakLength, setBreakLength] = useState(5);
+
   return (
     <div className="page">
       <div className="title">
@@ -25,26 +28,8 @@ function App() {
           />
         </div>
         <div className="white-card">
-          <p className="session-length">Session Length</p>
-          <img
-            className="up-arrow"
-            src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
-          />
-          <h1 className="fifty-five">25</h1>
-          <img
-            className="down-arrow"
-            src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
-          />
-          <p className="break-length">Break Length</p>
-          <img
-            className="up-arrow1"
-            src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
-          />
-          <h1 className="five">5</h1>
-          <img
-            className="down-arrow1"
-            src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
-          />
+          <Session session={sessionLength} />
+          <Break break={breakLength} />
         </div>
       </div>
     </div>
