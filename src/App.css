@@ -106,38 +106,7 @@ body {
   top: 70px;
   font-size: 30px;
 }
-.up-arrow {
-  width: 16px;
-  height: 16px;
-  position: relative;
-  left: 86px;
-  top: 25px;
-  border: none;
-  background-color: none;
-}
-.down-arrow {
-  width: 16px;
-  height: 16px;
-  position: relative;
-  left: 146px;
-  top: -39px;
-  -webkit-transform: rotate(180deg);
-}
-.up-arrow1 {
-  width: 16px;
-  height: 16px;
-  position: relative;
-  left: 250px;
-  top: -117px;
-}
-.down-arrow1 {
-  width: 16px;
-  height: 16px;
-  position: relative;
-  -webkit-transform: rotate(180deg);
-  left: 300px;
-  top: -179px;
-}
+
 .fifty-five {
   position: relative;
   left: 115px;
@@ -150,6 +119,68 @@ body {
   left: 280px;
   top: -152px;
   font-size: 16px;
+}
+.session-up{
+  width: 16px;
+  height: 16px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+.session-down{
+  width: 16px;
+  height: 16px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  -webkit-transform: rotate(180deg);
+}
+.break-up {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  left: 250px;
+  top: -117px;
+}
+.break-down {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  -webkit-transform: rotate(180deg);
+  left: 0px;
+  top: 0px;
+}
+.sessionup-btn{
+  width: 16px;
+  height: 16px;
+  position: relative;
+  left: 86px;
+  top: 25px;
+  background-color: white;
+}
+.sessiondown-btn{
+  width: 16px;
+  height: 16px;
+  position: relative;
+  left: 146px;
+  top: -39px;
+  background-color: white;
+}
+.breakup-btn{
+  width: 16px;
+  height: 16px;
+  position: relative;
+  left: 250px;
+  top: -117px;
+  background-color: white;
+}
+.breakdown-btn{
+  width: 16px;
+  height: 16px;
+  position: relative;
+  left: 300px;
+  top: -179px;
+  background-color: white;
 }
 @media only screen and (min-width: 600px) {
   body {

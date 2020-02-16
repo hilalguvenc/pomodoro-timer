@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Break from "./components/Break";
 import Session from "./components/Session";
+import Timer from "./components/Timer";
 
 function App() {
   const [sessionLength, setSessionLength] = useState(25);
@@ -13,8 +14,7 @@ function App() {
         <h1>Pomodoro Timer</h1>
       </div>
       <div className="card">
-        <h2 className="session">Session</h2>
-        <h1 className="clock">saat</h1>
+        <Timer />
         <div className="wrapper">
           <button className="start">Start</button>
           <img
