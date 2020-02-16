@@ -15,6 +15,14 @@ function App() {
   const onDecreaseBreakLength = () => {
     setBreakLength(breakLength - 1);
   };
+  const onDecreaseSessionLength = () => {
+    setSessionLength(sessionLength + 1);
+    setTimerMinute(sessionLength - 1);
+  };
+  const onIncreaseSessionLength = () => {
+    setSessionLength(sessionLength - 1);
+    setTimerMinute(sessionLength + 1);
+  };
 
   return (
     <div className="page">
@@ -36,7 +44,11 @@ function App() {
           />
         </div>
         <div className="white-card">
-          <Session session={sessionLength} />
+          <Session
+            session={sessionLength}
+            increaseSession={onIncreaseSessionLength}
+            decreaseSession={onDecreaseSessionLength}
+          />
           <Break
             break={breakLength}
             increaseBreak={onIncreaseBreakLength}
