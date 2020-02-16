@@ -7,6 +7,7 @@ import Timer from "./components/Timer";
 function App() {
   const [sessionLength, setSessionLength] = useState(25);
   const [breakLength, setBreakLength] = useState(5);
+  const [timerMinute, setTimerMinute] = useState(25);
 
   return (
     <div className="page">
@@ -14,7 +15,7 @@ function App() {
         <h1>Pomodoro Timer</h1>
       </div>
       <div className="card">
-        <Timer />
+        <Timer timerMinute={timerMinute} />
         <div className="wrapper">
           <button className="start">Start</button>
           <img
