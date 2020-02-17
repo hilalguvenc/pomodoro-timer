@@ -98,7 +98,7 @@ body {
   font-weight: bold;
   font-size: 18px;
   left: 225px;
-  top: -100px;
+  top: -110px;
 }
 .clock {
   position: relative;
@@ -116,15 +116,15 @@ body {
 }
 .five {
   position: relative;
-  left: 280px;
-  top: -152px;
+  left: 270px;
+  top: -162px;
   font-size: 16px;
 }
 .session-up{
   width: 16px;
   height: 16px;
   position: relative;
-  left: 0px;
+  left: 30px;
   top: 0px;
 }
 .session-down{
@@ -139,48 +139,48 @@ body {
   width: 16px;
   height: 16px;
   position: relative;
-  left: 250px;
-  top: -117px;
+  left: 40px;
+  top:-4px;
 }
 .break-down {
   width: 16px;
   height: 16px;
   position: relative;
   -webkit-transform: rotate(180deg);
-  left: 0px;
-  top: 0px;
-}
-.sessionup-btn{
-  width: 16px;
-  height: 16px;
-  position: relative;
-  left: 86px;
-  top: 25px;
-  background-color: white;
-}
-.sessiondown-btn{
-  width: 16px;
-  height: 16px;
-  position: relative;
-  left: 146px;
-  top: -39px;
-  background-color: white;
+  left: 55px;
+  top:83px;
 }
 .breakup-btn{
-  width: 16px;
-  height: 16px;
+  padding: 0;
+  border: none;
+  background: none;
   position: relative;
-  left: 250px;
-  top: -117px;
-  background-color: white;
+  left: 200px;
+  top: -120px;
 }
 .breakdown-btn{
-  width: 16px;
-  height: 16px;
+  padding: 0;
+  border: none;
+  background: none;
   position: relative;
-  left: 300px;
-  top: -179px;
-  background-color: white;
+  left: 240px;
+  top: -280px;
+}
+.sessionup-btn{
+  padding: 0;
+  border: none;
+  background: none;
+  position: relative;
+  left: 55px;
+  top: 28px;
+}
+.sessiondown-btn{
+  padding: 0;
+  border: none;
+  background: none;
+  position: relative;
+  left: 147px;
+  top: -46px;
 }
 @media only screen and (min-width: 600px) {
   body {

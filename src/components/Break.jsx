@@ -16,20 +16,18 @@ function Break(props) {
   return (
     <div>
       <p className="break-length">Break Length</p>
-      <button onClick={increaseCounter}>
-        {/* <img
+      <button className="breakup-btn" onClick={increaseCounter}>
+        <img
           className="break-up"
           src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
-        /> */}
-        up
+        />
       </button>
       <p className="five">{props.break}</p>
-      <button onClick={decreaseCounter}>
-        {/* <img
+      <button className="breakdown-btn" onClick={decreaseCounter}>
+        <img
           className="break-down"
           src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
-        /> */}
-        down
+        />
       </button>
     </div>
   );

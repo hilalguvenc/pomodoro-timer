@@ -23,26 +23,35 @@ function App() {
     setSessionLength(sessionLength - 1);
     setTimerMinute(sessionLength + 1);
   };
-
+  const onUpdateTimerMinute = () => {
+    setTimerMinute(prevState => {
+      return {
+        timerMinute: prevState.timerMinute - 1
+      };
+    });
+  };
+  const onToggleInterval = isSession => {
+    if (isSession) {
+      setTimerMinute({ timerMinute: sessionLength });
+    } else setTimerMinute({ timerMinute: breakLength });
+  };
+  const onReset = () => {
+    setTimerMinute({ timerMinute: sessionLength });
+  };
   return (
     <div className="page">
       <div className="title">
         <h1>Pomodoro Timer</h1>
       </div>
       <div className="card">
-        <Timer timerMinute={timerMinute} />
-        <div className="wrapper">
-          <button className="start">Start</button>
-          <img
-            className="start-icon"
-            src={`https://image.flaticon.com/icons/svg/254/254434.svg`}
-          />
-          <button className="reset">Reset</button>
-          <img
-            className="reset-icon"
-            src={`https://img.icons8.com/ios-filled/2x/recurring-appointment.png`}
-          />
-        </div>
+        <Timer
+          timerMinute={timerMinute}
+          breakLength={breakLength}
+          updateTimerMinute={onUpdateTimerMinute}
+          toggleInterval={onToggleInterval}
+          reset={onReset}
+        />
+
         <div className="white-card">
           <Session
             session={sessionLength}

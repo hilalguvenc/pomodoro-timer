@@ -17,20 +17,18 @@ function Session(props) {
   return (
     <div>
       <p className="session-length">Session Length</p>
-      <button onClick={props.increaseSession}>
-        {/* <img
+      <button className="sessionup-btn" onClick={props.increaseSession}>
+        <img
           className="session-up"
           src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
-        /> */}
-        up
+        />
       </button>
       <p className="fifty-five">{props.session}</p>
-      <button onClick={props.decreaseSession}>
-        {/* <img
+      <button className="sessiondown-btn" onClick={props.decreaseSession}>
+        <img
           className="session-down"
           src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
-        /> */}
-        down
+        />
       </button>
     </div>
   );
