@@ -40,7 +40,8 @@ function Timer(props) {
   };
   return (
     <div>
-      <h4>{isSession === true ? "Session" : "Break"}</h4>
+      <h4 className="session">{isSession === true ? "Session" : "Break"}</h4>
+      <div className="timer">
       <span>{props.timerMinute}</span>
       <span>:</span>
       <span>
@@ -50,6 +51,7 @@ function Timer(props) {
           ? "0" + timerSecond
           : timerSecond}
       </span>
+      </div>
       <div className="wrapper">
         <button onClick={start} className="start">
           Start
@@ -57,6 +59,7 @@ function Timer(props) {
         <img
           className="start-icon"
           src={`https://image.flaticon.com/icons/svg/254/254434.svg`}
+          alt=""
         />
         <button onClick={reset} className="reset">
           Reset
@@ -64,6 +67,7 @@ function Timer(props) {
         <img
           className="reset-icon"
           src={`https://img.icons8.com/ios-filled/2x/recurring-appointment.png`}
+          alt=""
         />
       </div>
     </div>

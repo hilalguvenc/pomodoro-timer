@@ -70,12 +70,12 @@ function App() {
 
         <div className="white-card">
           <Session
-            session={sessionLength}
+            sessionLength={sessionLength}
             increaseSession={onIncreaseSessionLength}
             decreaseSession={onDecreaseSessionLength}
           />
           <Break
-            break={breakLength}
+            breakLength={breakLength}
             increaseBreak={onIncreaseBreakLength}
             decreaseBreak={onDecreaseBreakLength}
           />

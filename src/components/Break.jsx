@@ -2,13 +2,13 @@ import React from "react";
 
 function Break(props) {
   const decreaseCounter = () => {
-    if (props.break === 1) {
+    if (props.breakLength === 1) {
       return;
     }
     props.decreaseBreak();
   };
   const increaseCounter = () => {
-    if (props.break === 60) {
+    if (props.breakLength === 60) {
       return;
     }
     props.increaseBreak();
@@ -20,13 +20,15 @@ function Break(props) {
         <img
           className="break-up"
           src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
+          alt=""
         />
       </button>
-      <p className="five">{props.break}</p>
+      <p className="five">{props.breakLength}</p>
       <button className="breakdown-btn" onClick={decreaseCounter}>
         <img
           className="break-down"
           src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
+          alt=""
         />
       </button>
     </div>
