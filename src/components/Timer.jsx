@@ -8,13 +8,22 @@ function Timer(props) {
   const decreaseTimer = () => {
     switch (timerSecond) {
       case 0:
+        if (props.timerMinute === 0) {
+          if (isSession) {
+            setIsSession({ isSession: false });
+            props.toggleInterval(isSession);
+          } else {
+            setIsSession({ isSession: true });
+            props.toggleInterval(isSession);
+          }
+        }
         props.updateTimerMinute();
         setTimerSecond({ timerSecond: 59 });
         break;
       default:
-        setTimerSecond(second => {
+        setTimerSecond(prevState=> {
           return {
-            timersecond: second.timerSecond - 1
+            timersecond: prevState.timerSecond - 1
           };
         });
     }
@@ -23,6 +32,7 @@ function Timer(props) {
     let intervalId = setInterval(decreaseTimer, 1000);
     setIntervalId({ intervalId: intervalId });
   };
+
   const reset = () => {
     clearInterval(intervalId);
     props.reset();
@@ -36,7 +46,7 @@ function Timer(props) {
       <span>
         {timerSecond === 0
           ? "00"
-          : timerSecond < 10
+          : timerSecond< 10
           ? "0" + timerSecond
           : timerSecond}
       </span>
