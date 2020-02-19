@@ -10,49 +10,30 @@ function App() {
   const [timerMinute, setTimerMinute] = useState(25);
 
   const onIncreaseBreakLength = () => {
-    setBreakLength(prevState => {
-      return {
-        breakLength: prevState.breakLength + 1
-      };
-    });
+    setBreakLength(breakLength + 1)
   };
   const onDecreaseBreakLength = () => {
-    setBreakLength(prevState => {
-      return {
-        breakLength: prevState.breakLength - 1
-      };
-    });
+    setBreakLength(breakLength - 1)
+     
   };
   const onIncreaseSessionLength = () => {
-    setSessionLength(prevState => {
-      return {
-        sessionLength: prevState.sessionLength + 1,
-        timerMinute: prevState.sessionLength + 1
-      };
-    });
+    setSessionLength(sessionLength + 1)
+    setTimerMinute(sessionLength + 1)
   };
   const onDecreaseSessionLength = () => {
-    setSessionLength(prevState => {
-      return {
-        sessionLength: prevState.breakLength - 1,
-        timerMinute: prevState.sessionLength - 1
-      };
-    });
+    setSessionLength(sessionLength - 1)
+    setTimerMinute(sessionLength - 1)
   };
   const onUpdateTimerMinute = () => {
-    setTimerMinute(prevState => {
-      return {
-        timerMinute: prevState.timerMinute - 1
-      };
-    });
+    setTimerMinute(timerMinute - 1)
   };
   const onToggleInterval = isSession => {
     if (isSession) {
-      setTimerMinute({ timerMinute: sessionLength });
-    } else setTimerMinute({ timerMinute: breakLength });
+      setTimerMinute(sessionLength );
+    } else setTimerMinute(breakLength);
   };
   const onReset = () => {
-    setTimerMinute({ timerMinute: sessionLength });
+    setTimerMinute( sessionLength);
   };
   return (
     <div className="page">

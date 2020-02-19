@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Break from "./Break";
 
 function Timer(props) {
   const [isSession, setIsSession] = useState(true);
@@ -17,26 +18,29 @@ function Timer(props) {
             props.toggleInterval(isSession);
           }
         }
+        setTimerSecond(59);
         props.updateTimerMinute();
-        setTimerSecond({ timerSecond: 59 });
         break;
       default:
-        setTimerSecond(prevState=> {
-          return {
-            timersecond: prevState.timerSecond - 1
-          };
-        });
+        setTimerSecond(timerSecond - 1);
     }
   };
-  const start = () => {
-    let intervalId = setInterval(decreaseTimer, 1000);
-    setIntervalId({ intervalId: intervalId });
-  };
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTimerSecond(timerSecond - 1);
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, []);
+    
+  // const start = () => {
+  //   let intervalId = setInterval(decreaseTimer, 1000);
+  //   setIntervalId( intervalId  );
+  // };
 
   const reset = () => {
     clearInterval(intervalId);
     props.reset();
-    setTimerSecond({ timerSecond: 0 });
+    setTimerSecond(timerSecond);
   };
   return (
     <div>
