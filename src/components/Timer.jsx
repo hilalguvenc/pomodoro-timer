@@ -25,17 +25,11 @@ function Timer(props) {
         setTimerSecond(timerSecond - 1);
     }
   };
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTimerSecond(timerSecond - 1);
-    }, 1000);
-    return () => clearInterval(intervalId);
-  }, []);
     
-  // const start = () => {
-  //   let intervalId = setInterval(decreaseTimer, 1000);
-  //   setIntervalId( intervalId  );
-  // };
+  const start = () => {
+    let intervalId = setInterval(decreaseTimer, 1000);
+    setIntervalId( intervalId  );
+  };
 
   const reset = () => {
     clearInterval(intervalId);
