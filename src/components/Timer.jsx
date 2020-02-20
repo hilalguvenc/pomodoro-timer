@@ -3,30 +3,37 @@ import React, { useState, useEffect } from "react";
 function Timer(props) {
   const [isSession, setIsSession] = useState(true);
   const [timerSecond, setTimerSecond] = useState(0);
+  const [isActive, setIsActive] = useState(false);
 
+  function toggle() {
+    setIsActive(!isActive);
+  }
   useEffect(() => {
-    let intervalId = setInterval(() => {
-      switch (timerSecond) {
-        case 0:
-          if (props.timerMinute === 0) {
-            if (isSession) {
-              setIsSession(!isSession);
+    let interval = null;
+    if (isActive) {
+      interval = setInterval(() => {
+        switch (timerSecond) {
+          case 0:
+            if (props.timerMinute === 0) {
+              if (isSession) {
+                setIsSession(!isSession);
+                props.toggleInterval(isSession);
+                setTimerSecond(59);
+              }
+            } else {
+              setIsSession(isSession);
               props.toggleInterval(isSession);
               setTimerSecond(59);
+              props.updateTimerMinute();
             }
-          } else {
-            setIsSession(isSession);
-            props.toggleInterval(isSession);
-            setTimerSecond(59);
-            props.updateTimerMinute();
-          }
-          break;
-        default:
-          setTimerSecond(timerSecond - 1);
-      }
-    }, 1000);
-    return () => clearInterval(intervalId);
-  }, [timerSecond]);
+            break;
+          default:
+            setTimerSecond(timerSecond - 1);
+        }
+      }, 1000);
+    }
+    return () => clearInterval(interval);
+  }, isActive[timerSecond]);
 
   const reset = () => {
     props.reset();
@@ -47,7 +54,9 @@ function Timer(props) {
         </span>
       </div>
       <div className="wrapper">
-        <button className="start">Start</button>
+        <button onClick={toggle} className="start">
+          Start
+        </button>
         <img
           className="start-icon"
           src={`https://image.flaticon.com/icons/svg/254/254434.svg`}
