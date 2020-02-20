@@ -34,11 +34,11 @@ function App() {
     } else setTimerMinute(sessionLength);
   };
   const onReset = (isSession) => {
-    if(isSession){
-      setTimerMinute(25);
+    if(isSession === true){
+      setTimerMinute(5);
     }
     else 
-     setTimerMinute(5);
+     setTimerMinute(25);
   };
   return (
     <div className="page">
