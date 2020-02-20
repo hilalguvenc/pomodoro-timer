@@ -13,7 +13,6 @@ function Session(props) {
     }
     props.increaseSession();
   };
-
   return (
     <div>
       <p className="session-length">Session Length</p>

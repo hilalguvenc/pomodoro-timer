@@ -8,8 +8,18 @@ function Timer(props) {
     let intervalId = setInterval(() => {
       switch (timerSecond) {
         case 0:
-          setTimerSecond(59);
-          props.updateTimerMinute();
+          if (props.timerMinute === 0) {
+            if (isSession) {
+              setIsSession(!isSession);
+              props.toggleInterval(isSession);
+              setTimerSecond(59);
+            }
+          } else {
+            setIsSession(isSession);
+            props.toggleInterval(isSession);
+            setTimerSecond(59);
+            props.updateTimerMinute();
+          }
           break;
         default:
           setTimerSecond(timerSecond - 1);
@@ -18,6 +28,10 @@ function Timer(props) {
     return () => clearInterval(intervalId);
   }, [timerSecond]);
 
+  const reset = () => {
+    props.reset();
+    setTimerSecond(0);
+  };
   return (
     <div>
       <h4 className="session">{isSession === true ? "Session" : "Break"}</h4>
@@ -39,7 +53,9 @@ function Timer(props) {
           src={`https://image.flaticon.com/icons/svg/254/254434.svg`}
           alt=""
         />
-        <button className="reset">Reset</button>
+        <button onClick={reset} className="reset">
+          Reset
+        </button>
         <img
           className="reset-icon"
           src={`https://img.icons8.com/ios-filled/2x/recurring-appointment.png`}
