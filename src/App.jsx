@@ -30,15 +30,13 @@ function App() {
   };
   const onToggleInterval = isSession => {
     if (isSession) {
-      setTimerMinute(breakLength-1);
+      setTimerMinute(breakLength - 1);
     } else setTimerMinute(sessionLength);
   };
-  const onReset = (isSession) => {
-    if(isSession === true){
+  const onReset = isSession => {
+    if (isSession === true) {
       setTimerMinute(5);
-    }
-    else 
-     setTimerMinute(25);
+    } else setTimerMinute(25);
   };
   return (
     <div className="page">
@@ -53,18 +51,19 @@ function App() {
           toggleInterval={onToggleInterval}
           reset={onReset}
         />
-
         <div className="white-card">
-          <Session
-            sessionLength={sessionLength}
-            increaseSession={onIncreaseSessionLength}
-            decreaseSession={onDecreaseSessionLength}
-          />
-          <Break
-            breakLength={breakLength}
-            increaseBreak={onIncreaseBreakLength}
-            decreaseBreak={onDecreaseBreakLength}
-          />
+          <div className="interval-length-container">
+            <Session
+              sessionLength={sessionLength}
+              increaseSession={onIncreaseSessionLength}
+              decreaseSession={onDecreaseSessionLength}
+            />
+            <Break
+              breakLength={breakLength}
+              increaseBreak={onIncreaseBreakLength}
+              decreaseBreak={onDecreaseBreakLength}
+            />
+          </div>
         </div>
       </div>
     </div>

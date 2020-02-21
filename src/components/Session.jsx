@@ -15,22 +15,25 @@ function Session(props) {
   };
   return (
     <div>
-      <p className="session-length">Session Length</p>
-      <button className="sessionup-btn" onClick={increaseSession}>
-        <img
+      <p className="length-content">Session Length</p>
+      <div className="interval-container">
+        <button className="btn" onClick={increaseSession}>
+          {/* <img
           className="session-up"
           src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
           alt=""
-        />
-      </button>
-      <p className="fifty-five">{props.sessionLength}</p>
-      <button className="sessiondown-btn" onClick={decreaseSession}>
-        <img
-          className="session-down"
+        /> */}
+          up
+        </button>
+        <p className="interval-length">{props.sessionLength}</p>
+        <button className="btn" onClick={decreaseSession}>
+          {/* <img
+         
           src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
-          alt=""
-        />
-      </button>
+          alt="" */}
+          down
+        </button>
+      </div>
     </div>
   );
 }

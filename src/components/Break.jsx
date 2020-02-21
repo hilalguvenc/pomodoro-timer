@@ -15,22 +15,25 @@ function Break(props) {
   };
   return (
     <div>
-      <p className="break-length">Break Length</p>
-      <button className="breakup-btn" onClick={increaseCounter}>
-        <img
-          className="break-up"
+      <p className="length-content">Break Length</p>
+      <div className="interval-container">
+        <button className="btn" onClick={increaseCounter}>
+          {/* <img
+          
           src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
           alt=""
-        />
-      </button>
-      <p className="five">{props.breakLength}</p>
-      <button className="breakdown-btn" onClick={decreaseCounter}>
-        <img
-          className="break-down"
+        /> */}
+          up
+        </button>
+        <p className="interval-length">{props.breakLength}</p>
+        <button className="btn" onClick={decreaseCounter}>
+          {/* <img
           src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
           alt=""
-        />
-      </button>
+        /> */}
+          down
+        </button>
+      </div>
     </div>
   );
 }

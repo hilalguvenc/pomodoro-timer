@@ -14,6 +14,7 @@ body {
   border: white;
   border-color: white;
   background-color: white;
+  border-radius: 10px;
   color: black;
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
@@ -30,6 +31,7 @@ body {
   border: white;
   border-color: white;
   background-color: white;
+  border-radius: 10px;
   color: black;
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
@@ -44,8 +46,8 @@ body {
 }
 .card {
   background-color: #eb144c;
-  border-top-left-radius:20px;
-  border-top-right-radius:20px ;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   width: 100vw;
   height: 300px;
   position: relative;
@@ -55,8 +57,8 @@ body {
 }
 .white-card {
   background-color: white;
-  border-bottom-left-radius:20px;
-  border-bottom-right-radius:20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   width: 100%;
   height: 100px;
   position: relative;
@@ -90,113 +92,69 @@ body {
   text-align: center;
   z-index: 1;
 }
-.session-length {
-  position: relative;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: bold;
-  font-size: 18px;
-  left: 60px;
-  top: 40px;
-}
-.break-length {
-  position: relative;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: bold;
-  font-size: 18px;
-  left: 225px;
-  top: -110px;
-}
 .clock {
   position: relative;
   left: 210px;
   top: 70px;
   font-size: 30px;
 }
-
-.fifty-five {
-  position: relative;
-  left: 115px;
-  bottom: 7px;
-  font-size: 16px;
-  top: -10px;
-}
-.five {
-  position: relative;
-  left: 270px;
-  top: -162px;
-  font-size: 16px;
-}
-.session-up{
-  width: 16px;
-  height: 16px;
-  position: relative;
-  left: 30px;
-  top: 0px;
-}
-.session-down{
-  width: 16px;
-  height: 16px;
-  position: relative;
-  left: 0px;
-  top: 0px;
-  -webkit-transform: rotate(180deg);
-}
-.break-up {
-  width: 16px;
-  height: 16px;
-  position: relative;
-  left: 40px;
-  top:-4px;
-}
-.break-down {
-  width: 16px;
-  height: 16px;
-  position: relative;
-  -webkit-transform: rotate(180deg);
-  left: 55px;
-  top:83px;
-}
-.breakup-btn{
-  padding: 0;
-  border: none;
-  background: none;
-  position: relative;
-  left: 200px;
-  top: -120px;
-}
-.breakdown-btn{
-  padding: 0;
-  border: none;
-  background: none;
-  position: relative;
-  left: 240px;
-  top: -280px;
-}
-.sessionup-btn{
-  padding: 0;
-  border: none;
-  background: none;
-  position: relative;
-  left: 55px;
-  top: 28px;
-}
-.sessiondown-btn{
-  padding: 0;
-  border: none;
-  background: none;
-  position: relative;
-  left: 147px;
-  top: -46px;
-}
-.timer{
+.timer {
   font-size: 120px;
   text-align: center;
   color: white;
 }
+.interval-container {
+  display: flex;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  top: -30px;
+  left: 0px;
+}
+.interval-length-container {
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  top: -20px;
+  left: 8px;
+  position: relative;
+}
+.btn {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 5px 12px;
+  margin: 0px 10px;
+  height: 25px;
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.interval-length {
+  margin: 0px 10px;
+  font-size: 18px;
+}
+.length-content {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 40px 30px;
+  position: relative;
+}
+.wrapper {
+  position: relative;
+  left: 7px;
+  top: -15px;
+}
 @media only screen and (min-width: 600px) {
   body {
     background-color: black;
-    position:fixed;
+    position: fixed;
     left: 425px;
     top: -40px;
   }
@@ -269,87 +227,75 @@ body {
     text-align: center;
   }
   .start-icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     position: relative;
     right: 20px;
     text-align: center;
     z-index: 1;
-    top: 60px;
+    top: 63px;
   }
   .reset-icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     position: relative;
-    top: 60px;
+    top: 63px;
     left: -10px;
     text-align: center;
     z-index: 1;
   }
-  .session-length {
-    position: relative;
+  .interval-container {
+    display: flex;
+    align-items: center;
     font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
     font-weight: bold;
-    font-size: 23px;
-    left: 60px;
-    top: 55px;
+    position: relative;
+    top: -9px;
+    left: 0px;
   }
-  .break-length {
-    position: relative;
+  .interval-length-container {
+    display: flex;
     font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
     font-weight: bold;
-    font-size: 23px;
-    left: 305px;
-    top: -130px;
+    left: 66px;
+    position: relative;
+  }
+  .btn {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 5px 12px;
+    margin: 0px 10px;
+    height: 25px;
+    background-color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .interval-length {
+    margin: 0px 10px;
+    font-size: 25px;
+  }
+  .length-content {
+    text-align: center;
+    top: 17px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 40px 30px;
+    position: relative;
+  }
+  .wrapper {
+    position: relative;
+    left: 7px;
+    top: -15px;
   }
   .clock {
     position: relative;
     left: 210px;
     top: 70px;
     font-size: 30px;
-  }
-  .session-up{
-    width: 20px;
-    height: 20px;
-    position: relative;
-    left: 33px;
-    top: 10px;
-    border: none;
-    background-color: none;
-  }
-  .session-down {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    left: 10px;
-    top: -6px;
-    -webkit-transform: rotate(180deg);
-  }
-  .break-up{
-    width: 20px;
-    height: 20px;
-    position: relative;
-    left: 130px;
-    top: -27px;
-  }
-  .break-down{
-    width: 20px;
-    height: 20px;
-    position: relative;
-    -webkit-transform: rotate(180deg);
-    left: 150px;
-    top: 42px;
-  }
-  .fifty-five {
-    position: relative;
-    left: 122px;
-    bottom: 7px;
-    font-size: 20px;
-  }
-  .five {
-    position: relative;
-    left: 365px;
-    top: -195px;
-    font-size: 20px;
   }
 }
