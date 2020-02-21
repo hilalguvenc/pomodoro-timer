@@ -92,22 +92,18 @@ body {
   text-align: center;
   z-index: 1;
 }
-.clock {
-  position: relative;
-  left: 210px;
-  top: 70px;
-  font-size: 30px;
-}
 .timer {
   font-size: 120px;
   text-align: center;
   color: white;
+  position: relative;
+  top: -18px;
 }
 .interval-container {
   display: flex;
   align-items: center;
   font-family: "Times New Roman", Times, serif;
-  font-size: 18px;
+  font-size: 13px;
   font-weight: bold;
   position: relative;
   top: -30px;
@@ -116,7 +112,7 @@ body {
 .interval-length-container {
   display: flex;
   font-family: "Times New Roman", Times, serif;
-  font-size: 18px;
+  font-size: 13px;
   font-weight: bold;
   top: -20px;
   left: 8px;
@@ -136,12 +132,11 @@ body {
 }
 .interval-length {
   margin: 0px 10px;
-  font-size: 17px;
 }
 .length-content {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   margin: 40px 30px;
   position: relative;
@@ -292,10 +287,11 @@ body {
     left: 7px;
     top: -15px;
   }
-  .clock {
+  .timer {
+    font-size: 120px;
+    text-align: center;
+    color: white;
     position: relative;
-    left: 210px;
-    top: 70px;
-    font-size: 30px;
+    top: 20px;
   }
 }
