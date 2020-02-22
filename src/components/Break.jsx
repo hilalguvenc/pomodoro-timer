@@ -18,20 +18,17 @@ function Break(props) {
       <p className="length-content">Break Length</p>
       <div className="interval-container">
         <button className="btn" onClick={increaseCounter}>
-          {/* <img
-          
-          src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
-          alt=""
-        /> */}
-          up
+          <img className="img"
+            src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
+            alt=""
+          />
         </button>
         <p className="interval-length">{props.breakLength}</p>
         <button className="btn" onClick={decreaseCounter}>
-          {/* <img
-          src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
-          alt=""
-        /> */}
-          down
+          <img className="img"
+            src={`https://image.flaticon.com/icons/svg/271/271237.svg`}
+            alt=""
+          />
         </button>
       </div>
     </div>
