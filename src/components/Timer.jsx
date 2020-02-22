@@ -16,6 +16,7 @@ function Timer(props) {
           case 0:
             if (props.timerMinute === 0) {
               if (isSession) {
+                document.getElementById("audio").play();
                 setIsSession(!isSession);
                 props.toggleInterval(isSession);
                 setTimerSecond(59);
@@ -36,6 +37,7 @@ function Timer(props) {
   }, isActive[timerSecond]);
 
   const reset = () => {
+    setIsActive(!isActive);
     props.reset();
     setTimerSecond(0);
   };

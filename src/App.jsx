@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./styles/App.css";
 import Break from "./components/Break";
 import Session from "./components/Session";
 import Timer from "./components/Timer";
@@ -34,9 +34,7 @@ function App() {
     } else setTimerMinute(sessionLength);
   };
   const onReset = isSession => {
-    if (isSession === true) {
-      setTimerMinute(5);
-    } else setTimerMinute(25);
+      setTimerMinute(25);
   };
   return (
     <div className="page">
