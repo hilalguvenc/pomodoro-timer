@@ -10,5 +10,5 @@ The Pomodoro Technique is a time management method developed by Francesco Cirill
 
 ### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+This section has moved here: https://pomodoro-timer-react-project.netlify.com/
 
